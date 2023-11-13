@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function redirectToLanguage(selectedLang) {
     // Dodajte više "else if" blokova za druge jezike i odgovarajuće URL-ove
     if (selectedLang === "en") {
-      window.location.href = "./";
+      var pathArray = document.URL.split("/");
+      var secondLevelLocation = pathArray[5];
+      window.location.href = "./" + secondLevelLocation;
     } else if (selectedLang === "rs") {
-      window.location.href = "../";
+      window.location.href = "../" + secondLevelLocation;
     }
   }
 
